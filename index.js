@@ -3,7 +3,7 @@
 // put your own value below!
 const clientId = '26dd2b221ac14593bafa265425b2a0ce'; 
 const authEndpoint = 'https://accounts.spotify.com/authorize';
-const redirectUri = "https://AnxiousVioletredUser-1--teachermarinam.repl.co/";
+const redirectUri = "https://teachermarinam.github.io/VocabularyAPI/";
 
 // Get the hash of the url
 const hash = window.location.hash
