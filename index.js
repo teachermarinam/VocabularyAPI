@@ -28,7 +28,7 @@ const scopes = [
 ];
 
 // Make a call using the token
-$.ajax({
+/*$.ajax({
    url: "https://api.spotify.com/v1/search",
    type: "GET",
    beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
@@ -39,7 +39,7 @@ $.ajax({
        item.appendTo($('#top-artists'));
      });
    }
-});
+});*/
 
 // If there is no token, redirect to Spotify authorization
 if (!_token) {
