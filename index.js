@@ -27,12 +27,6 @@ const scopes = [
   'user-read-private'
 ];
 
-// If there is no token, redirect to Spotify authorization
-if (!_token) {
-  console.log(_token);
-  window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
-}
-
 // Make a call using the token
 $.ajax({
    url: "https://api.spotify.com/v1/me/top/artists",
@@ -46,6 +40,12 @@ $.ajax({
      });
    }
 });
+
+// If there is no token, redirect to Spotify authorization
+if (!_token) {
+  console.log(_token);
+  window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
+}
 
 function formatQueryParams(params) {
   const queryItems = Object.keys(params)
