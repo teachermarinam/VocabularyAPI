@@ -29,7 +29,7 @@ const scopes = [
 
 // Make a call using the token
 $.ajax({
-   url: "https://api.spotify.com/v1/search?",
+   url: "https://api.spotify.com/v1/search",
    type: "GET",
    beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
    success: function(data) { 
